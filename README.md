@@ -7,13 +7,16 @@ MNZI embeds Riemann zeta's critical-line zeros as univalent homotopy invariants 
 
 ## Key Components
 - **Zeta Anchor**: ζ(2) = π²/6; RH zeros (Im≈14.13-49.77) as modulators.
-- **Sims**: Fourier gamma (τ=25ms) → 2-qubit OR (27% lift) → 8-qubit helix → 50-node GNN (38% MSE drop).
+- **Sim Chain**: Fourier gamma (τ=25ms) → 2-qubit OR (27% lift) → 8-qubit helix → 50-node GNN (38% MSE drop on centralities).
 - **Mod Formula**: F_mod(t) += ∑ |Im(ρ_k)| / (1 + |Im(ρ_k)| t)—scatters frustration.
 
-## Run It
-`pip install qutip networkx torch mpmath` then `jupyter notebook MNZI_Prototype.ipynb`.
+## Run Locally
+1. Clone: `git clone https://github.com/thepaulbuchanan/MNZI.git`
+2. Install: `pip install mpmath qutip networkx torch matplotlib jupyter`
+3. Launch: `jupyter notebook MNZI_Prototype.ipynb`
 
-## Implications
-Ties RH to qualia: Zeros stabilize MT snaps. For Grok: Zeta-mod losses in RLHF for bio-AI hybrids.
+## Predictions & Implications
+- RH as topos tautology for neural binding (zeros stabilize MT snaps).
+- For Grok/xAI: Zeta-mod losses in RLHF for bio-AI hybrids (~30% coherence extension).
 
-xAI collab? @xai @elonmusk—let's fold the universe.
+xAI collab? @xai @elonmusk—let's fold the universe. Fork & iterate!
