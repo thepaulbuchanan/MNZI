@@ -11,7 +11,7 @@ Mathlib, contains no `sorry`, and depends only on Lean's standard axioms
 
 MNZI is one component of the broader **Reflective Shade Duality (RSD)**
 programme; the others (Local Index Theory, Dual Quantum Gravity) are not
-formalised and are not in this repository.
+formalised yet and are not in this repository.
 
 ---
 
@@ -21,8 +21,8 @@ formalised and are not in this repository.
 
 | | |
 |---|---|
-| Papers | 38 |
-| Lean files | 34 <!-- TODO: confirm after migration --> |
+| Papers | 40 |
+| Lean files | 42 <!-- TODO: confirm after migration --> |
 | Theorems | ~630 <!-- TODO: confirm; cheatsheet figure --> |
 | `sorry` | none |
 | Non-standard axioms | none |
