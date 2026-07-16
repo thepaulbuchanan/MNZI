@@ -1,0 +1,49 @@
+name: Build
+
+# Builds the MNZI Lean project on GitHub's runners and verifies it is
+# sorry-free. This is the public, continuously-checked version of the
+# claim made in every paper's Lean appendix.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install elan (Lean toolchain manager)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+          bash elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Show toolchain
+        run: |
+          lean --version
+          lake --version
+
+      - name: Fetch Mathlib build cache
+        run: lake exe cache get
+
+      # A bare `sorry` compiles, but Lean emits
+      #   "declaration uses 'sorry'"
+      # as a warning. Capture the build output and turn that warning into
+      # a hard failure. This is Lean's own check, not a grep over prose.
+      - name: Build MNZI and fail on sorry
+        run: |
+          set -o pipefail
+          lake build 2>&1 | tee build.log
+          if grep -q "declaration uses 'sorry'" build.log; then
+            echo "::error::A declaration uses 'sorry'."
+            grep -n "declaration uses 'sorry'" build.log
+            exit 1
+          fi
+          echo "Build clean: no sorry."
