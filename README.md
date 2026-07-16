@@ -1,4 +1,5 @@
 # MNZI
+[Build](https://github.com/thepaulbuchanan/MNZI/actions/workflows/build.yml/badge.svg)
 
 Lean 4 formalisation of the **Motivic Neural Zeta Integrator (MNZI)** programme:
 a series of papers on the Riemann zeta function, Kreĭn-space operator theory,
@@ -15,8 +16,8 @@ formalised and are not in this repository.
 ---
 
 ## Status
+[Build](https://github.com/thepaulbuchanan/MNZI/actions/workflows/build.yml/badge.svg)
 
-     ![Build](https://github.com/thepaulbuchanan/MNZI/actions/workflows/build.yml/badge.svg)
 
 | | |
 |---|---|
