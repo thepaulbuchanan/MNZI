@@ -16,9 +16,7 @@ formalised and are not in this repository.
 
 ## Status
 
-<!-- TODO: add the CI badge once the first green run lands:
      ![Build](https://github.com/thepaulbuchanan/MNZI/actions/workflows/build.yml/badge.svg)
--->
 
 | | |
 |---|---|
