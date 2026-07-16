@@ -18,3 +18,7 @@ jobs:
           build: true
           use-mathlib-cache: true
           use-github-cache: false
+          leanchecker: true
+          nanoda: true
+          nanoda-allow-sorry: false
+leanchecker: true
