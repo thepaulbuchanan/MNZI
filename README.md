@@ -21,8 +21,8 @@ formalised yet and are not in this repository.
 
 | | |
 |---|---|
-| Papers | 40 |
-| Lean files | 42 <!-- TODO: confirm after migration --> |
+| Papers | 38 |
+| Lean files | 40 <!-- TODO: confirm after migration --> |
 | Theorems | ~630 <!-- TODO: confirm; cheatsheet figure --> |
 | `sorry` | none |
 | Non-standard axioms | none |
